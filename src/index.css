@@ -1,13 +1,159 @@
+/* General styles */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding-top: 60px; /* Push content below the fixed header */
+    padding-bottom: 50px; /* Avoid footer overlap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header */
+.header {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Footer */
+.footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CreateNote Component */
+.main_note {
+    margin-top: 30px; /* Push it below the header */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Styling */
+.main_note form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main_note input,
+.main_note textarea {
+    padding: 10px;
+    margin: 6px 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+
+.main_note input:focus,
+.main_note textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0px 0px 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Add Button */
+.main_note Button {
+    align-self: flex-end;
+    background-color: #ffcc00 !important;
+    color: #333 !important;
+    margin-top: 20px;
+    border-radius: 50%;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main_note Button:hover {
+    background-color: #e6b800 !important;
+}
+
+.plusSymbol {
+    font-size: 24px !important;
+}
+
+/* Note Component */
+.note {
+    background-color: #fff;
+    width: 280px;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Note Title */
+.note h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Note Content */
+.note p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Delete Button */
+.btn {
+    align-self: flex-end;
+    background-color: #ff6666 !important;
+    color: white !important;
+    border-radius: 50%;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #cc0000 !important;
+}
+
+/* Delete Icon */
+.deleteIcon {
+    font-size: 20px !important;
+}
+ 
