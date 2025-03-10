@@ -2,15 +2,19 @@ import React from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Button } from "@mui/material";
 
-const Note = () => {
+const Note = (props) => {
+
+    const dele = (ele)=>{
+        props.deleteItem(props.id);
+    }
 
     return (
         <>
             <div className="note">
-                <h3> Title</h3>
+                <h3> {props.title}</h3>
                 <br />
-                <p> This is the cuntent</p>
-                <Button className="btn">
+                <p>{props.note}</p>
+                <Button className="btn" onClick={dele}>
                     <DeleteIcon className="deleteIcon" />
                 </Button>
             </div>
